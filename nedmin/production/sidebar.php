@@ -10,8 +10,10 @@
                   <li><a><i class="fa fa-cog"></i> AYARLAR <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="genel-ayar.php">Genel Ayarlar</a></li>
-                      <li><a href="iletisim-ayar.php">İletişim Ayarları</a></li>
-                      <li><a href="sosyal-ayar.php">Sosyal Ayarlar</a></li>
+                      <li><a href="iletisim-ayar.php">İletişim Ayarlar</a></li>
+                      <li><a href="Api-ayar.php">Api Ayarları</a></li>
+                      <li><a href="sosyal-ayar.php">Sosyal Medya Ayarlar</a></li>
+                      <li><a href="mail-ayar.php">Mail Ayarlar</a></li>
                     </ul>
                   </li>
                   

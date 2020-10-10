@@ -34,7 +34,7 @@ include '../netting/islem.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Sosyal Medya Ayarları</h2>
+                    <h2>Mail Ayarlar</h2>
                     
                     <ul class="nav navbar-right panel_toolbox">
                     <?php
@@ -59,31 +59,39 @@ include '../netting/islem.php';
                                    
                                            
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Facebook <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MailSmtp Host <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required"  name="ayar_facebook" value="<?php echo $ayarcek['ayar_facebook'];?>" class="form-control col-md-7 col-xs-12" >
+                          <input type="text" id="first-name" required="required"  name="ayar_smtphost" value="<?php echo $ayarcek['ayar_smtphost'];?>" class="form-control col-md-7 col-xs-12" >
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Twitter <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MailSmtp User <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" name="ayar_twitter" value="<?php echo $ayarcek['ayar_twitter'];?>"  class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="ayar_smtpuser" value="<?php echo $ayarcek['ayar_smtpuser'];?>"  class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Youtube <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MailSmtp Password <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" name="ayar_youtube" value="<?php echo $ayarcek['ayar_youtube'];?>" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="ayar_smtppasword" value="<?php echo $ayarcek['ayar_smtppasword'];?>" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">MailSmtp Port<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" name="ayar_smtpport" value="<?php echo $ayarcek['ayar_smtpport'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
                         <div  class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" align="right">
-                          <button type="submit" name="sosyalayarkaydet" class="btn btn-primary">Güncelle</button>
+                          <button type="submit" name="mailayarkaydet" class="btn btn-primary">Güncelle</button>
                         </div>
                 
                     </form>

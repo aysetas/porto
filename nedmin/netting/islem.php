@@ -61,6 +61,29 @@ if(isset($_POST["iletisimayarkaydet"])){
   
 
 }
+if(isset($_POST["apiayarkaydet"])){
+
+  $ayarkaydet=$db->prepare("UPDATE ayar SET
+  ayar_recapctha=:recapctha,
+  ayar_googlemap=:googlemap,
+  ayar_analystic=:analystic
+  WHERE ayar_id=1");
+
+  $update=$ayarkaydet ->execute(array(
+      'recapctha'=>$_POST['ayar_recapctha'],
+      'googlemap'=>$_POST['ayar_googlemap'],
+      'analystic'=>$_POST['ayar_analystic']
+  ));
+  
+  if($update){
+      Header("location:../production/api-ayar.php ? durum=ok");
+  }
+    else{
+      Header("location:../production/api-iletisim.php ? durum=no");
+    }  
+  
+
+}
 if(isset($_POST["sosyalayarkaydet"])){
 
   $ayarkaydet=$db->prepare("UPDATE ayar SET
@@ -84,5 +107,30 @@ if(isset($_POST["sosyalayarkaydet"])){
   
 
 }
+if(isset($_POST["mailayarkaydet"])){
 
+  $ayarkaydet=$db->prepare("UPDATE ayar SET
+  ayar_smtphost=:smtphost,
+  ayar_smtpuser=:smtpuser,
+  ayar_smtppasword=:smtppasword,
+  ayar_smtpport=:smtpport
+  WHERE ayar_id=1");
+
+  $update=$ayarkaydet ->execute(array(
+      'smtphost'=>$_POST['ayar_smtphost'],
+      'smtpuser'=>$_POST['ayar_smtpuser'],
+      'smtppasword'=>$_POST['ayar_smtppasword'],
+      'smtpport'=>$_POST['ayar_smtpport']
+    
+  ));
+  
+  if($update){
+      Header("location:../production/mail-ayar.php ? durum=ok");
+  }
+    else{
+      Header("location:../production/mail-iletisim.php ? durum=no");
+    }  
+  
+
+}
 ?>
