@@ -133,4 +133,34 @@ if(isset($_POST["mailayarkaydet"])){
   
 
 }
+
+//hakkımızda kısmı
+
+if(isset($_POST["hakkimizdakaydet"])){
+
+  $hakkimizdakaydet=$db->prepare("UPDATE hakkimizda SET
+  hakkimizda_baslik=:baslik,
+  hakkimizda_icerik=:icerik,
+  hakkimizda_video=:video,
+  hakkimizda_vizyon=:vizyon,
+  hakkimizda_misyon=:misyon
+  WHERE hakkimizda_id=1");
+
+  $update=$hakkimizdakaydet ->execute(array(
+      'baslik'=>$_POST['hakkimizda_baslik'],
+      'icerik'=>$_POST['hakkimizda_icerik'],
+      'video'=>$_POST['hakkimizda_video'],
+      'vizyon'=>$_POST['hakkimizda_vizyon'],
+      'misyon'=>$_POST['hakkimizda_misyon']
+  ));
+  
+  if($update){
+      Header("location:../production/hakkimizda.php ? durum=ok");
+  }
+    else{
+      Header("location:../production/hakkimizda.php ? durum=no");
+    }  
+  
+
+}
 ?>
