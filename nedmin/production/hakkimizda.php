@@ -8,6 +8,9 @@ include '../netting/islem.php';
                     $hakkimizdasorgu -> execute (array(1));
                     $hakkimizdacek= $hakkimizdasorgu -> Fetch(PDO::FETCH_ASSOC);       
 ?> 
+<head>
+<script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+</head>
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
@@ -59,46 +62,47 @@ include '../netting/islem.php';
                                    
                                            
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Başlık <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Başlık <span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" id="first-name" required="required"  name="hakkimizda_baslik" value="<?php echo $hakkimizdacek['hakkimizda_baslik'];?>" class="form-control col-md-7 col-xs-12" >
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">İçerik<span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">İçerik<span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" name="hakkimizda_icerik" value="<?php echo $hakkimizdacek['hakkimizda_icerik'];?>"  class="form-control col-md-7 col-xs-12">
-                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                        <textarea class="ckeditor" id="editor1"  name="hakkimizda_icerik"><?php echo $hakkimizdacek['hakkimizda_icerik'];?> </textarea>
+            
+                      </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Video <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Video <span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" id="first-name" required="required" name="hakkimizda_video" value="<?php echo $hakkimizdacek['hakkimizda_video'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Vizyon <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Vizyon <span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" id="first-name" required="required" name="hakkimizda_vizyon" value="<?php echo $hakkimizdacek['hakkimizda_vizyon'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Misyon <span class="required">*</span>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Misyon <span class="required">*</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" id="first-name" required="required" name="hakkimizda_misyon" value="<?php echo $hakkimizdacek['hakkimizda_misyon'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
-                        <div  class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" align="right">
+                        <div  class="col-md-8 col-sm-8 col-xs-12 col-md-offset-3" align="right">
                           <button type="submit" name="hakkimizdakaydet" class="btn btn-primary">Güncelle</button>
                         </div>
                 
@@ -115,5 +119,15 @@ include '../netting/islem.php';
           </div>
         </div>
         <!-- /page content -->
+        <script>
+                        ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+                </script>
 
 <?php include 'footer.php';?>

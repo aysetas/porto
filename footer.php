@@ -5,7 +5,7 @@
 							<a href="demo-law-firm.html" class="logo mb-md">
 								<img alt="Porto Website Template" class="img-responsive" width="97" height="32" src="img/demos/law-firm/logo-law-firm-footer.png">
 							</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna. Phasellus semper scelerisque purus, et semper nisl lacinia sit amet. Praesent venenatis turpis vitae purus semper, eget sagittis velit venenatis.</p>
+							<p><?php echo $ayarcek['ayar_description'];?></p>
 						</div>
 						<div class="col-md-3 col-md-offset-1">
 							<h5 class="mb-sm">Adres Bilgilerimiz</h5>
