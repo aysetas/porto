@@ -4,8 +4,9 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i>Anasayfa <span class="label label-success pull-right"></span></a></li>
+                <li><a href="index.php"><i class="fa fa-laptop"></i>Anasayfa <span class="label label-success pull-right"></span></a></li>
                 <li><a href="hakkimizda.php"><i class="fa fa-book"></i>Hakkımızda <span class="label label-success pull-right"></span></a></li>
+                <li><a href="slider.php"><i class="fa fa-image"></i>Slider <span class="label label-success pull-right"></span></a></li>
 
                   <li><a><i class="fa fa-cog"></i> AYARLAR <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
